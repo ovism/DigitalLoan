@@ -97,9 +97,66 @@
 
 
 
+<!-- Loan card -->
+<section>
+    <div class="container">
+        <div class="row text-center p-4" >
+            <div class="col-12">
+                <h2>Check Eligibility & Apply</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row p-4">
+            <div class="col-md-3">
+                <h4 class="text-center"><strong>Personal Loan</strong></h4>
+                <hr>
+                <div class="profile-card-2"><a href= "{{route('personalloan')}}">
+                        <img src="assets/img/loan-01.png" class="img img-responsive"></a>
+                    <div class="profile-name">PERSONAL LOAN</div>
+                    <div class="profile-username">Personal loan</div>
+                    <div class="profile-icons">
+                        <a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text-center">SME Loan</h4>
+                <hr>
+                <div class="profile-card-2">
+                    <img src="assets/img/loan2-01.png" class="img img-responsive">
+                    <div class="profile-name">SME LOAN</div>
+                    <div class="profile-username">SME Loan</div>
+                    <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text-center"><strong>Credit Card</strong></h4>
+                <hr>
+                <div class="profile-card-2">
+                    <img src="assets/img/loan2-01.png" class="img img-responsive">
+                    <div class="profile-name">Credit Card</div>
+                    <div class="profile-username">credit card</div>
+                    <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text-center">Prize Bond</h4>
+                <hr>
+                <div class="profile-card-2">
+                    <img src="assets/img/loan2-01.png" class="img img-responsive">
+                    <div class="profile-name">Prize Bond</div>
+                    <div class="profile-username">Prize Bond</div>
+                    <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 <!--OverView -->
-<section id="about">
+<!--<section id="about">
 
     <div class="container p-5">
         <div class="row justify-content-center">
@@ -149,7 +206,7 @@
 </section>
 
 <div>
-</div>
+</div>-->
 
 
 
@@ -232,7 +289,7 @@
 
 
 <!-- Applicable -->
-<section class="applicable" id="applicable_part">
+<!--<section class="applicable" id="applicable_part">
     <div class="container">
         <div class="row">
             <div class="col-lg-5">
@@ -251,7 +308,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 
 

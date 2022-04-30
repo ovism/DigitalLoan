@@ -36,14 +36,6 @@
 
 
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" name="exampleFormControlSelect1" id="exampleFormControlSelect1">
-                                <option>OFFICER</option>
-                                <option>CUSTOMER</option>
-                                </select>
-                        </div>
-
-                        <div class="form-group">
                             <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
                             <input type="password" id="password" name="password" placeholder="Password"/>
                         </div>

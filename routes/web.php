@@ -20,4 +20,13 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('home');
 })->name('dashboard');
-//Route::get('osTravel/home', [PackageController::class, 'home'])->name('dashboard');
+
+
+Route::get('/personalloan', function () {
+    return view('eligibilityForm/form');
+})->name('personalloan');
+
+Route::post('/eligible/form', [\App\Http\Controllers\LoanController::class, 'store'])->name('eligible/form');
+
+
+//Route::get('osit/home', [PackageController::class, 'home'])->name('dashboard');
