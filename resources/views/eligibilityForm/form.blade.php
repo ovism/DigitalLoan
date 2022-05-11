@@ -17,10 +17,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
 
-{{--    <!-- STYLE CSS -->--}}
-{{--    <link rel="stylesheet" href="{{ asset("assets/css/mainStyle.css") }}">--}}
-{{--    <!-- Bootstrap CSS -->--}}
-{{--    <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.min.css) }}">--}}
+    {{--    <!-- STYLE CSS -->--}}
+    {{--    <link rel="stylesheet" href="{{ asset("assets/css/mainStyle.css") }}">--}}
+    {{--    <!-- Bootstrap CSS -->--}}
+    {{--    <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.min.css) }}">--}}
 
 </head>
 <body>
@@ -49,10 +49,10 @@
     <div class="image-holder">
         <img src="{{asset('assets/img/form-wizard.png')}}" alt="">
     </div>
-{{--    <form action="">--}}
+    {{--    <form action="">--}}
 
-       <form action="{{route('eligible/form')}}" method="post" enctype="multipart/form-data" id="" class="">
-            @csrf
+    <form action="{{route('eligible/form')}}" method="post" enctype="multipart/form-data" id="" class="">
+        @csrf
         <div class="form-header">
 
             <h3>Personal Loan Eligibility</h3>
@@ -103,7 +103,7 @@
                         Loan Type
                     </label>
                     <div class="form-holder">
-                        <select name="" id="" class="form-control">
+                        <select name="loanType" id="" class="form-control">
                             <option value="" selected disabled>Select Term</option>
                             <option value="term 1" class="option">Personal Loan</option>
                         </select>
@@ -120,7 +120,7 @@
                         Date of Birth:
                     </label>
                     <div class="form-holder">
-                        <input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1" required>
+                        <input type="text" name="dateOfBirth" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -128,7 +128,7 @@
                         Location of Birth:
                     </label>
                     <div class="form-holder">
-                        <select name="" id="" class="form-control">
+                        <select name="birthLocation" id="" class="form-control">
                             <option value="dhaka" class="option">Dhaka</option>
                             <option value="chattogram" class="option">Chattogram</option>
                             <option value="khulna" class="option">Khulna</option>
@@ -154,10 +154,10 @@
                         Phone Number:
                     </label>
                     <div class="form-holder">
-                        <input type="text" class="form-control" required>
+                        <input  type="text" name="phone_number" class="form-control" required>
                     </div>
                 </div>
-                <div class="form-row" style="margin-bottom: 50px;">
+                <div name="gender" class="form-row"  style="margin-bottom: 50px;">
                     <label for="">
                         Gender:
                     </label>
@@ -188,7 +188,7 @@
                         Company Name:
                     </label>
                     <div class="form-holder">
-                        <input type="text" class="form-control" placeholder="Start Typing Here" required>
+                        <input type="text"  name="company_name" class="form-control" placeholder="Start Typing Here" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -196,7 +196,7 @@
                         Company Type:
                     </label>
                     <div class="form-holder">
-                        <select name="" id="" class="form-control">
+                        <select name="company_type" id="" class="form-control">
                             <option value="" selected disabled>Selec Your Company Type</option>
                             <option value="school&college" class="option">School & College</option>
                             <option value="nationaluniversity" class="option">National University</option>
@@ -261,7 +261,7 @@
                         Your Job Status:
                     </label>
                     <div class="form-holder">
-                        <select name="" id="" class="form-control">
+                        <select name="job_type" id="" class="form-control">
                             <option value="" selected disabled>Select Job Status</option>
                             <option value="permanent" class="option">Permanent</option>
                             <option value="contractual" class="option">Contractual</option>
@@ -276,38 +276,38 @@
                         Job Experience (Current)
                     </label>
                     <div class="form-holder">
-                        <select name="" id="" class="form-control">
+                        <select name="job_experience" id="" class="form-control">
                             <option value="" selected disabled>0 Year</option>
-                            <option value="1Year" class="option">1 Year</option>
-                            <option value="2Years" class="option">2 Years</option>
-                            <option value="3Years" class="option">3 Years</option>
-                            <option value="4Years" class="option">4 Years</option>
-                            <option value="5Years" class="option">5 Years</option>
-                            <option value="6Years" class="option">6 Years</option>
-                            <option value="7Years" class="option">7 Years</option>
-                            <option value="8Years" class="option">8 Years</option>
-                            <option value="9Years" class="option">9 Years</option>
-                            <option value="10Years" class="option">10 Years</option>
-                            <option value="11Years" class="option">11 Years</option>
-                            <option value="12Years" class="option">12Years</option>
-                            <option value="13Years" class="option">13 Years</option>
-                            <option value="14Years" class="option">14 Years</option>
-                            <option value="15Years" class="option">15 Years</option>
-                            <option value="16Years" class="option">16 Years</option>
-                            <option value="17Years" class="option">17 Years</option>
-                            <option value="18Years" class="option">18 Years</option>
-                            <option value="19Years" class="option">19 Years</option>
-                            <option value="20Years" class="option">20 Years</option>
-                            <option value="21Years" class="option">21 Years</option>
-                            <option value="22Years" class="option">22 Years</option>
-                            <option value="23Years" class="option">23 Years</option>
-                            <option value="24Years" class="option">24 Years</option>
-                            <option value="25Years" class="option">25 Years</option>
-                            <option value="26Years" class="option">26 Years</option>
-                            <option value="27Years" class="option">27 Years</option>
-                            <option value="28Years" class="option">28 Years</option>
-                            <option value="29Years" class="option">29 Years</option>
-                            <option value="30Years" class="option">30 Years</option>
+                            <option value="1" class="option">1 Year</option>
+                            <option value="2" class="option">2 Years</option>
+                            <option value="3" class="option">3 Years</option>
+                            <option value="4" class="option">4 Years</option>
+                            <option value="5" class="option">5 Years</option>
+                            <option value="6" class="option">6 Years</option>
+                            <option value="7" class="option">7 Years</option>
+                            <option value="8" class="option">8 Years</option>
+                            <option value="9" class="option">9 Years</option>
+                            <option value="10" class="option">10 Years</option>
+                            <option value="11" class="option">11 Years</option>
+                            <option value="12" class="option">12Years</option>
+                            <option value="13" class="option">13 Years</option>
+                            <option value="14" class="option">14 Years</option>
+                            <option value="15" class="option">15 Years</option>
+                            <option value="16" class="option">16 Years</option>
+                            <option value="17" class="option">17 Years</option>
+                            <option value="18" class="option">18 Years</option>
+                            <option value="19" class="option">19 Years</option>
+                            <option value="20" class="option">20 Years</option>
+                            <option value="21" class="option">21 Years</option>
+                            <option value="22" class="option">22 Years</option>
+                            <option value="23" class="option">23 Years</option>
+                            <option value="24" class="option">24 Years</option>
+                            <option value="25" class="option">25 Years</option>
+                            <option value="26" class="option">26 Years</option>
+                            <option value="27" class="option">27 Years</option>
+                            <option value="28" class="option">28 Years</option>
+                            <option value="29" class="option">29 Years</option>
+                            <option value="30" class="option">30 Years</option>
                         </select>
                         <i class="zmdi zmdi-caret-down"></i>
                     </div>
@@ -319,36 +319,36 @@
                     <div class="form-holder">
                         <select name="" id="" class="form-control">
                             <option value="" selected disabled>0 Year</option>
-                            <option value="1Year" class="option">1 Year</option>
-                            <option value="2Years" class="option">2 Years</option>
-                            <option value="3Years" class="option">3 Years</option>
-                            <option value="4Years" class="option">4 Years</option>
-                            <option value="5Years" class="option">5 Years</option>
-                            <option value="6Years" class="option">6 Years</option>
-                            <option value="7Years" class="option">7 Years</option>
-                            <option value="8Years" class="option">8 Years</option>
-                            <option value="9Years" class="option">9 Years</option>
-                            <option value="10Years" class="option">10 Years</option>
-                            <option value="11Years" class="option">11 Years</option>
-                            <option value="12Years" class="option">12Years</option>
-                            <option value="13Years" class="option">13 Years</option>
-                            <option value="14Years" class="option">14 Years</option>
-                            <option value="15Years" class="option">15 Years</option>
-                            <option value="16Years" class="option">16 Years</option>
-                            <option value="17Years" class="option">17 Years</option>
-                            <option value="18Years" class="option">18 Years</option>
-                            <option value="19Years" class="option">19 Years</option>
-                            <option value="20Years" class="option">20 Years</option>
-                            <option value="21Years" class="option">21 Years</option>
-                            <option value="22Years" class="option">22 Years</option>
-                            <option value="23Years" class="option">23 Years</option>
-                            <option value="24Years" class="option">24 Years</option>
-                            <option value="25Years" class="option">25 Years</option>
-                            <option value="26Years" class="option">26 Years</option>
-                            <option value="27Years" class="option">27 Years</option>
-                            <option value="28Years" class="option">28 Years</option>
-                            <option value="29Years" class="option">29 Years</option>
-                            <option value="30Years" class="option">30 Years</option>
+                            <option value="1" class="option">1 Year</option>
+                            <option value="2" class="option">2 Years</option>
+                            <option value="3" class="option">3 Years</option>
+                            <option value="4" class="option">4 Years</option>
+                            <option value="5" class="option">5 Years</option>
+                            <option value="6" class="option">6 Years</option>
+                            <option value="7" class="option">7 Years</option>
+                            <option value="8" class="option">8 Years</option>
+                            <option value="9" class="option">9 Years</option>
+                            <option value="10" class="option">10 Years</option>
+                            <option value="11" class="option">11 Years</option>
+                            <option value="12" class="option">12Years</option>
+                            <option value="13" class="option">13 Years</option>
+                            <option value="14" class="option">14 Years</option>
+                            <option value="15" class="option">15 Years</option>
+                            <option value="16" class="option">16 Years</option>
+                            <option value="17" class="option">17 Years</option>
+                            <option value="18" class="option">18 Years</option>
+                            <option value="19" class="option">19 Years</option>
+                            <option value="20" class="option">20 Years</option>
+                            <option value="21" class="option">21 Years</option>
+                            <option value="22" class="option">22 Years</option>
+                            <option value="23" class="option">23 Years</option>
+                            <option value="24" class="option">24 Years</option>
+                            <option value="25" class="option">25 Years</option>
+                            <option value="26" class="option">26 Years</option>
+                            <option value="27" class="option">27 Years</option>
+                            <option value="28" class="option">28 Years</option>
+                            <option value="29" class="option">29 Years</option>
+                            <option value="30" class="option">30 Years</option>
                         </select>
                         <i class="zmdi zmdi-caret-down"></i>
                     </div>
@@ -365,7 +365,7 @@
                     <label for="">
                     </label>
                     <div class="form-holder">
-                        <input type="text" class="form-control" placeholder="Enter Take Home Bank Salary (BDT)" required>
+                        <input type="text" name="actualSalary" class="form-control" placeholder="Enter Take Home Bank Salary (BDT)" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -403,7 +403,7 @@
             </section>
 
         </div>
-           <button type="submit">test</button>
+        <button type="submit">test</button>
     </form>
 </div>
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Response\EligibleFrom;
+use App\Http\Response\LoanForm;
+use App\Http\Response\Package\StoreResponse;
 use Illuminate\Http\Request;
 
 class LoanController extends Controller
@@ -81,5 +83,20 @@ class LoanController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function apply(Request $request)
+    {
+        return new LoanForm(
+            $request->except('image_filepath', '', ''),
+            $request->hasFile('image_filepath') ? $request->file('image_filepath') : null
+        );
     }
 }

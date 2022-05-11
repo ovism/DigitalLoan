@@ -10,7 +10,7 @@
     <link rel="stylesheet" href= "{{ asset("assets/css/bootstrap.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/owl.carousel.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/owl.theme.default.min.css") }}">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+{{--    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>--}}
     <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset("assets/img/smalllogo.png")}}">
 
@@ -236,10 +236,7 @@
                 <label for="inputresult" class="form-label"><h6>Result</h6></label>
                 <input type="text" id="inputresult" class="form-control" aria-describedby="resultHelpBlock">
             </div>
-            <div class="col-12 p-3" style="display: none;">
-                <button type="button" class="btn btn-success" id="calculatorbtn">Calculate EMI</button>
-            </div>
-            <div class="col-8 p-3" style="background-color: white;">
+            <div class="col-12 p-3" style="">
                 <button type="button" class="btn btn-success" id="calculatorbtn">Calculate EMI</button>
             </div>
         </div>
@@ -493,6 +490,31 @@
         </div>
     </div>
 </div>
+
+<script>
+    const element = document.getElementById("calculatorbtn");
+    element.addEventListener("click", myFunction);
+
+    function myFunction() {
+        //e.preventDefault();
+        var loan=document.getElementById('loanamount').value;
+
+        var interestRate=document.getElementById('inputinterestrate').value;
+        var tenure=document.getElementById('inputtenure').value;
+
+        var noOfMonths=Math.floor(tenure)*12;
+        var monthlyRate=interestRate/(12*100);
+        var onePlusR=Math.pow(1+monthlyRate,noOfMonths)
+        var denominator=onePlusR-1;
+        var emi=(loan*monthlyRate*(onePlusR/denominator)).toPrecision(5);
+        var totalAmt=noOfMonths*parseFloat(emi);
+        console.log(emi);
+        var payableEmi=document.getElementById('inputresult');
+        payableEmi.value=parseFloat(emi);
+
+    }
+</script>
+
 
 <script src="{{asset("assets/js/jquery.min.js")}}"></script>
 <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>

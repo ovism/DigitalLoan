@@ -26,6 +26,14 @@ Route::get('/personalloan', function () {
     return view('eligibilityForm/form');
 })->name('personalloan');
 
+Route::get('/loan-apply', function () {
+    return view('loan_apply');
+})->name('loan-apply');
+
+Route::post('/loan-apply/form', [\App\Http\Controllers\LoanController::class, 'apply'])->name('loan-apply/form');
+
+
+
 Route::post('/eligible/form', [\App\Http\Controllers\LoanController::class, 'store'])->name('eligible/form');
 
 
